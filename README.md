@@ -1,6 +1,6 @@
-### NOTE
-Please read with attention, in case of any doubt don't hesitate to contact us. 
-First of all, you'll need to fork this repository when you finish all, please send us the pull request with code.
+# NOTE
+### Please read with attention*
+You'll need to fork this repository when you finish all send us the pull request with code.
 
 
 # kafka-challenge
@@ -33,36 +33,29 @@ Open a terminal window and navigate to the directory where you extracted Kafka.
 
 Start ZooKeeper by running the following command:
 ```console
-bash
-Copy code
 bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 Open a new terminal window and navigate to the Kafka directory.
 Start the Kafka server by running the following command:
-
-bash
-Copy code
+```console
 bin/kafka-server-start.sh config/server.properties
+```
 Create the input and output Kafka topics by running the following commands:
-
-bash
-Copy code
+```console
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic mySourceTopic
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic myDestinationTopic
-Verify that the Kafka topics were created by running the following command:
-
-css
-Copy code
-bin/kafka-topics.sh --list --bootstrap-server localhost:9092
-Update the application.properties file in your Quarkus project to include the following configuration:
-
-makefile
-Copy code
-kafka.bootstrap.servers=localhost:9092
-Run your Quarkus project using the following command:
-
-bash
-Copy code
-./mvnw quarkus:dev
 ```
 
+Verify that the Kafka topics were created by running the following command:
+```console
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+```
 
+Update the application.properties file in your Quarkus project to include the following configuration:
+```console
+kafka.bootstrap.servers=localhost:9092
+```
+Run your Quarkus project using the following command:
+```console
+./mvnw quarkus:dev
+```
