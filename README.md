@@ -1,5 +1,7 @@
 ### NOTE
-Please read with attention, in case of any doubt don't hesitate to contact us.
+Please read with attention, in case of any doubt don't hesitate to contact us. 
+First of all, you'll need to fork this repository when you finish all, please send us the pull request with code.
+
 
 # kafka-challenge
 This repository aims to present a challenge that will need to be implemented.  
@@ -62,3 +64,5 @@ bash
 Copy code
 ./mvnw quarkus:dev
 ```
+
+
